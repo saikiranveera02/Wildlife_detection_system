@@ -1,0 +1,13 @@
+ultralytics
+pydantic
+boto3
+pytest
+hypothesis
+opencv-python
+pyyaml
+pandas
+matplotlib
+sagemaker
+fastapi
+uvicorn
+python-multipart

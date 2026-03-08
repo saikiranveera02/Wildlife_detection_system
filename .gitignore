@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Model Weights
+*.pt
+*.onnx
+
+# Uploads and temporary data
+data/uploads/
+.gemini/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Large Media
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+data/

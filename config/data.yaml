@@ -1,0 +1,8 @@
+# YOLOv8 Elephant Detection Dataset Configuration
+path: s3://wildlife-detection-sau-186224145570/data  # bucket path
+train: train/images
+val: val/images
+
+# Classes
+names:
+  0: elephant
