@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Upload, AlertTriangle, CheckCircle, Video, Activity } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://qkzpmdfc6f.us-east-1.awsapprunner.com/api';
 
 const Dashboard = () => {
     const [file, setFile] = useState(null);

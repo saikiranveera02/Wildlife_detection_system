@@ -8,19 +8,8 @@ from fastapi.responses import StreamingResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from ultralytics import YOLO
 
-# --- ANACONDA SSL HOTFIX ---
-# Anaconda requires multiple paths for OpenSSL DLLs to be discovered on Windows
-conda_base = r"C:\Users\saiki\anaconda3"
-conda_paths = [
-    os.path.join(conda_base, r"Library\bin"),
-    os.path.join(conda_base, r"Library\mingw-w64\bin"),
-    os.path.join(conda_base, r"Library\usr\bin"),
-    os.path.join(conda_base, r"Scripts")
-]
-for p in conda_paths:
-    if os.path.exists(p) and p not in os.environ.get("PATH", ""):
-        os.environ["PATH"] = p + os.pathsep + os.environ.get("PATH", "")
-# ---------------------------
+# sys.path optimization for container
+sys.path.append(os.path.join(os.getcwd(), 'src'))
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 from lambda_handler import lambda_handler

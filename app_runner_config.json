@@ -1,0 +1,21 @@
+{
+    "ServiceName": "wildlife-detection-service",
+    "SourceConfiguration": {
+        "ImageRepository": {
+            "ImageIdentifier": "186224145570.dkr.ecr.us-east-1.amazonaws.com/wildlife-detection-repo:latest",
+            "ImageRepositoryType": "ECR",
+            "ImageConfiguration": {
+                "Port": "8000"
+            }
+        },
+        "AutoDeploymentsEnabled": false,
+        "AuthenticationConfiguration": {
+            "AccessRoleArn": "arn:aws:iam::186224145570:role/AppRunnerECRAccessRole"
+        }
+    },
+    "InstanceConfiguration": {
+        "Cpu": "1 vCPU",
+        "Memory": "2 GB",
+        "InstanceRoleArn": "arn:aws:iam::186224145570:role/SageMakerExecutionRole"
+    }
+}

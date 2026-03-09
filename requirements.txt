@@ -1,13 +1,7 @@
 ultralytics
 pydantic
 boto3
-pytest
-hypothesis
-opencv-python
-pyyaml
-pandas
-matplotlib
-sagemaker
+opencv-python-headless
 fastapi
 uvicorn
 python-multipart

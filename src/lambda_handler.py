@@ -4,8 +4,8 @@ import uuid
 from datetime import datetime
 
 # Initialize AWS clients
-dynamodb = boto3.resource('dynamodb')
-sns = boto3.client('sns')
+dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
+sns = boto3.client('sns', region_name='us-east-1')
 table = dynamodb.Table('WildlifeDetections')
 TOPIC_ARN = 'arn:aws:sns:us-east-1:186224145570:ElephantAlerts'
 
